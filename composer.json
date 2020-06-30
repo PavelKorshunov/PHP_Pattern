@@ -1,0 +1,20 @@
+{
+    "name": "pattern/design-patterns-php",
+    "description": "Design patterns in PHP",
+    "license": "",
+    "authors": [
+        {
+            "name": "Pavel Korshunov",
+            "email": "info@hard-skills.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "classmap": ["Behavioral", "Creational", "Structural"]
+    }
+}
