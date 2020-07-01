@@ -9,6 +9,19 @@
 ```bash
 $ composer install
 ```
+
+Запуск unit тестов из корня проекта в Linux:
+
+```bash
+$ ./vendor/bin/phpunit
+```
+
+Запуск unit тестов через консоль OpenServer из корня проекта на Windows:
+
+```bash
+$ vendor\bin\phpunit
+```
+
 # Шаблоны проектирования
 
 Классификация паттернов проектирования по назначению:
