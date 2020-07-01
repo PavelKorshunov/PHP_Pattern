@@ -35,4 +35,19 @@ class ObserverTest extends TestCase
 
         $this->assertEquals("Push уведомление отправлено!", $observerPush->getPushNotify());
     }
+
+    public function testPushAndMailObserverNotify()
+    {
+        $observerMail = new MailNotifyObserver();
+        $observerPush = new PushNotifyObserver();
+
+        $order = new Order();
+        $order->attach($observerMail);
+        $order->attach($observerPush);
+
+        $order->createOrder(3);
+
+        $this->assertEquals("Уведомление отправлено на почту!", $observerMail->getMailNotify());
+        $this->assertEquals("Push уведомление отправлено!", $observerPush->getPushNotify());
+    }
 }
